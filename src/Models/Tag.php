@@ -1,6 +1,6 @@
-<?php namespace Cviebrock\EloquentTaggable\Models;
+<?php namespace Twpars\EloquentTaggable\Models;
 
-use Cviebrock\EloquentTaggable\Services\TagService;
+use Twpars\EloquentTaggable\Services\TagService;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;

@@ -1,6 +1,6 @@
-<?php namespace Cviebrock\EloquentTaggable\Test;
+<?php namespace Twpars\EloquentTaggable\Test;
 
-use Cviebrock\EloquentTaggable\Services\TagService;
+use Twpars\EloquentTaggable\Services\TagService;
 
 
 /**
@@ -10,7 +10,7 @@ class TagServiceTests extends TestCase
 {
 
     /**
-     * @var \Cviebrock\EloquentTaggable\Services\TagService
+     * @var \Twpars\EloquentTaggable\Services\TagService
      */
     protected $service;
 

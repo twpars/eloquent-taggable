@@ -1,7 +1,7 @@
-<?php namespace Cviebrock\EloquentTaggable\Test;
+<?php namespace Twpars\EloquentTaggable\Test;
 
-use Cviebrock\EloquentTaggable\Events\ModelTagged;
-use Cviebrock\EloquentTaggable\Events\ModelUntagged;
+use Twpars\EloquentTaggable\Events\ModelTagged;
+use Twpars\EloquentTaggable\Events\ModelUntagged;
 
 
 /**

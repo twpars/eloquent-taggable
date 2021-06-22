@@ -1,10 +1,10 @@
-<?php namespace Cviebrock\EloquentTaggable;
+<?php namespace Twpars\EloquentTaggable;
 
-use Cviebrock\EloquentTaggable\Events\ModelTagged;
-use Cviebrock\EloquentTaggable\Events\ModelUntagged;
-use Cviebrock\EloquentTaggable\Exceptions\NoTagsSpecifiedException;
-use Cviebrock\EloquentTaggable\Models\Tag;
-use Cviebrock\EloquentTaggable\Services\TagService;
+use Twpars\EloquentTaggable\Events\ModelTagged;
+use Twpars\EloquentTaggable\Events\ModelUntagged;
+use Twpars\EloquentTaggable\Exceptions\NoTagsSpecifiedException;
+use Twpars\EloquentTaggable\Models\Tag;
+use Twpars\EloquentTaggable\Services\TagService;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
@@ -14,7 +14,7 @@ use Illuminate\Database\Query\JoinClause;
 /**
  * Class Taggable
  *
- * @package Cviebrock\EloquentTaggable
+ * @package Twpars\EloquentTaggable
  */
 trait Taggable
 {
@@ -256,7 +256,7 @@ trait Taggable
      * @param array|string $tags
      *
      * @return Builder
-     * @throws \Cviebrock\EloquentTaggable\Exceptions\NoTagsSpecifiedException
+     * @throws \Twpars\EloquentTaggable\Exceptions\NoTagsSpecifiedException
      * @throws \ErrorException
      */
     public function scopeWithAllTags(Builder $query, $tags): Builder
@@ -298,7 +298,7 @@ trait Taggable
      * @param array|string $tags
      *
      * @return Builder
-     * @throws \Cviebrock\EloquentTaggable\Exceptions\NoTagsSpecifiedException
+     * @throws \Twpars\EloquentTaggable\Exceptions\NoTagsSpecifiedException
      * @throws \ErrorException
      */
     public function scopeWithAnyTags(Builder $query, $tags): Builder

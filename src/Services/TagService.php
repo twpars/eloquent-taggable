@@ -1,9 +1,9 @@
 <?php
 
-namespace Cviebrock\EloquentTaggable\Services;
+namespace Twpars\EloquentTaggable\Services;
 
-use Cviebrock\EloquentTaggable\Models\Tag;
-use Cviebrock\EloquentTaggable\Taggable;
+use Twpars\EloquentTaggable\Models\Tag;
+use Twpars\EloquentTaggable\Taggable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
@@ -380,7 +380,7 @@ class TagService
      */
     private function getQualifiedPivotTableName(string $class=null): string
     {
-        /** @var \Cviebrock\EloquentTaggable\Taggable $instance */
+        /** @var \Twpars\EloquentTaggable\Taggable $instance */
         $instance = $class ? new $class : new class extends Model { use Taggable; };
 
         return $instance->tags()->getConnection()->getTablePrefix() .

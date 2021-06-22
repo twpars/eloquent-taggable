@@ -1,6 +1,6 @@
-<?php namespace Cviebrock\EloquentTaggable\Test;
+<?php namespace Twpars\EloquentTaggable\Test;
 
-use Cviebrock\EloquentTaggable\ServiceProvider;
+use Twpars\EloquentTaggable\ServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 
@@ -59,7 +59,7 @@ abstract class TestCase extends Orchestra
      *
      * @param array $data
      *
-     * @return \Cviebrock\EloquentTaggable\Test\TestModel
+     * @return \Twpars\EloquentTaggable\Test\TestModel
      */
     protected function newModel(array $data = ['title' => 'test']): TestModel
     {
@@ -71,7 +71,7 @@ abstract class TestCase extends Orchestra
      *
      * @param array $data
      *
-     * @return \Cviebrock\EloquentTaggable\Test\TestDummy
+     * @return \Twpars\EloquentTaggable\Test\TestDummy
      */
     protected function newDummy(array $data = ['title' => 'dummy']): TestDummy
     {

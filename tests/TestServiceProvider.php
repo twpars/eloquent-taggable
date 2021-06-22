@@ -1,4 +1,4 @@
-<?php namespace Cviebrock\EloquentTaggable\Test;
+<?php namespace Twpars\EloquentTaggable\Test;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 

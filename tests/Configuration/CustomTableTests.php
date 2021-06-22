@@ -1,7 +1,7 @@
-<?php namespace Cviebrock\EloquentTaggable\Test\Configuration;
+<?php namespace Twpars\EloquentTaggable\Test\Configuration;
 
-use Cviebrock\EloquentTaggable\Models\Tag;
-use Cviebrock\EloquentTaggable\Test\TestCase;
+use Twpars\EloquentTaggable\Models\Tag;
+use Twpars\EloquentTaggable\Test\TestCase;
 
 
 /**
@@ -11,7 +11,7 @@ class CustomTableTests extends TestCase
 {
 
     /**
-     * @var \Cviebrock\EloquentTaggable\Test\TestModel
+     * @var \Twpars\EloquentTaggable\Test\TestModel
      */
     protected $testModel;
 

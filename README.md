@@ -6,12 +6,12 @@ Easily add the ability to tag your Eloquent models in Laravel.
 > If you are using an older version, please install a version of the package
 > that [correlates to your Laravel version](#installation).
 
-[![Build Status](https://github.com/cviebrock/eloquent-taggable/workflows/tests/badge.svg?branch=master)](https://github.com/cviebrock/eloquent-taggable/actions)
-[![Total Downloads](https://poser.pugx.org/cviebrock/eloquent-taggable/downloads?format=flat)](https://packagist.org/packages/cviebrock/eloquent-taggable)
-[![Latest Stable Version](https://poser.pugx.org/cviebrock/eloquent-taggable/v/stable?format=flat)](https://packagist.org/packages/cviebrock/eloquent-taggable)
-[![Latest Unstable Version](https://poser.pugx.org/cviebrock/eloquent-taggable/v/unstable?format=flat)](https://packagist.org/packages/cviebrock/eloquent-taggable)
+[![Build Status](https://github.com/Twpars/eloquent-taggable/workflows/tests/badge.svg?branch=master)](https://github.com/Twpars/eloquent-taggable/actions)
+[![Total Downloads](https://poser.pugx.org/Twpars/eloquent-taggable/downloads?format=flat)](https://packagist.org/packages/Twpars/eloquent-taggable)
+[![Latest Stable Version](https://poser.pugx.org/Twpars/eloquent-taggable/v/stable?format=flat)](https://packagist.org/packages/Twpars/eloquent-taggable)
+[![Latest Unstable Version](https://poser.pugx.org/Twpars/eloquent-taggable/v/unstable?format=flat)](https://packagist.org/packages/Twpars/eloquent-taggable)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/9e1bb86e-2659-4123-9b6f-89370ef1483d/mini.png)](https://insight.sensiolabs.com/projects/9e1bb86e-2659-4123-9b6f-89370ef1483d)
-[![License](https://img.shields.io/packagist/l/cviebrock/eloquent-taggable)](LICENSE.md)
+[![License](https://img.shields.io/packagist/l/Twpars/eloquent-taggable)](LICENSE.md)
 
 
 * [Installation](#installation)
@@ -53,10 +53,10 @@ the correct README.md for your version (Github displays the version in
 the _master_ branch by default, which might not be what you want).
 
 
-1. Install the `cviebrock/eloquent-taggable` package via composer:
+1. Install the `Twpars/eloquent-taggable` package via composer:
 
     ```sh
-    $ composer require cviebrock/eloquent-taggable
+    $ composer require Twpars/eloquent-taggable
     ```
 
     The package will automatically register its service provider.
@@ -64,13 +64,13 @@ the _master_ branch by default, which might not be what you want).
 2. Publish the configuration file:
 
     ```sh
-    php artisan vendor:publish --provider="Cviebrock\EloquentTaggable\ServiceProvider" --tag "config"
+    php artisan vendor:publish --provider="Twpars\EloquentTaggable\ServiceProvider" --tag "config"
     ```
 
 3. Publish the migrations:
 
     ```sh
-    php artisan vendor:publish --provider="Cviebrock\EloquentTaggable\ServiceProvider" --tag "migrations"
+    php artisan vendor:publish --provider="Twpars\EloquentTaggable\ServiceProvider" --tag "migrations"
     ```
 
 If you modify the migrations, keep in mind that you can add more fields,
@@ -94,7 +94,7 @@ should be done in the configuration file (under the `tables` key).
 Your models should use the Taggable trait:
 
 ```php
-use Cviebrock\EloquentTaggable\Taggable;
+use Twpars\EloquentTaggable\Taggable;
 
 class MyModel extends Eloquent
 {
@@ -387,7 +387,7 @@ You can create a listener to handle when a model is tagged:
 ```php
 // in your EventServiceProvider 
 
-use Cviebrock\EloquentTaggable\Events\ModelTagged;
+use Twpars\EloquentTaggable\Events\ModelTagged;
 ...
 protected $listen = [
     ...
@@ -398,13 +398,13 @@ protected $listen = [
 ];
 ```
 
-The listener receives the `Cviebrock\EloquentTaggable\Events\ModelTagged` event
+The listener receives the `Twpars\EloquentTaggable\Events\ModelTagged` event
 with the model and tags:
 
 ```php
 namespace App\Listeners;
 
-use Cviebrock\EloquentTaggable\Events\ModelTagged;
+use Twpars\EloquentTaggable\Events\ModelTagged;
 
 class ReactModelTagged
 {
@@ -421,7 +421,7 @@ class ReactModelTagged
 }
 ```
 
-You can use also listen for the `Cviebrock\EloquentTaggable\Events\ModelUntagged` event
+You can use also listen for the `Twpars\EloquentTaggable\Events\ModelUntagged` event
 which is fired when a tag is removed.
 
 
@@ -481,7 +481,7 @@ exposed via the various methods provided by the trait, so you probably don't nee
 
 ```php
 // Instantiate the service (can also be done via dependency injection)
-$tagService = app(\Cviebrock\EloquentTaggable\Services\TagService::class);
+$tagService = app(\Twpars\EloquentTaggable\Services\TagService::class);
 
 // Return a collection of all the Tag models used by \App\Model instances
 // (same as doing \App\Model::allTagModels() ):
@@ -528,7 +528,7 @@ return [
     'connection'           => null,
     'throwEmptyExceptions' => false,
     'taggedModels'         => [],
-    'model'                => \Cviebrock\EloquentTaggable\Models\Tag::class,
+    'model'                => \Twpars\EloquentTaggable\Models\Tag::class,
     'tables' => [
         'taggable_tags'      => 'taggable_tags',
         'taggable_taggables' => 'taggable_taggables',
@@ -615,7 +615,7 @@ will "short-circuit" the query and return no models.  This makes your applicatio
 so you don't need to check for empty values before calling the scope.
 
 However, if `throwEmptyExceptions` is set to true, then passing an empty value to the scope will
-throw a `Cviebrock\EloquentTaggable\Exceptions\NoTagsSpecifiedException` exception in these cases.
+throw a `Twpars\EloquentTaggable\Exceptions\NoTagsSpecifiedException` exception in these cases.
 You can then catch the exception in your application code and handle it however you like.
 
 ### taggedModels
@@ -656,17 +656,17 @@ model, service, and migration classes will all read the configuration values.
 
 ## Bugs, Suggestions, Contributions and Support
 
-Thanks to [everyone](https://github.com/cviebrock/eloquent-taggable/graphs/contributors)
+Thanks to [everyone](https://github.com/Twpars/eloquent-taggable/graphs/contributors)
 who has contributed to this project, with a big shout-out to
 [Michael Riediger](https://stackoverflow.com/users/502502/riedsio) for help optimizing the SQL.
 
 Special thanks to
-[JetBrains](https://www.jetbrains.com/?from=cviebrock/eloquent-taggable) for their
+[JetBrains](https://www.jetbrains.com/?from=Twpars/eloquent-taggable) for their
 Open Source License Program ... and the excellent PHPStorm IDE, of course!
 
-[![JetBrains](./.github/jetbrains.svg)](https://www.jetbrains.com/?from=cviebrock/eloquent-taggable)
+[![JetBrains](./.github/jetbrains.svg)](https://www.jetbrains.com/?from=Twpars/eloquent-taggable)
 
-Please use [Github](https://github.com/cviebrock/eloquent-taggable) for reporting bugs,
+Please use [Github](https://github.com/Twpars/eloquent-taggable) for reporting bugs,
 and making comments or suggestions.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute changes.
@@ -674,7 +674,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute changes.
 
 ## Copyright and License
 
-[eloquent-taggable](https://github.com/cviebrock/eloquent-taggable)
+[eloquent-taggable](https://github.com/Twpars/eloquent-taggable)
 was written by [Colin Viebrock](http://viebrock.ca) and is released under the
 [MIT License](LICENSE.md).
 

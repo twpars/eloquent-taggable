@@ -1,6 +1,6 @@
-<?php namespace Cviebrock\EloquentTaggable\Test;
+<?php namespace Twpars\EloquentTaggable\Test;
 
-use Cviebrock\EloquentTaggable\Services\TagService;
+use Twpars\EloquentTaggable\Services\TagService;
 
 
 /**

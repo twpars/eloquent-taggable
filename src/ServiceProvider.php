@@ -1,13 +1,13 @@
-<?php namespace Cviebrock\EloquentTaggable;
+<?php namespace Twpars\EloquentTaggable;
 
-use Cviebrock\EloquentTaggable\Services\TagService;
+use Twpars\EloquentTaggable\Services\TagService;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 
 /**
  * Class ServiceProvider
  *
- * @package Cviebrock\EloquentTaggable
+ * @package Twpars\EloquentTaggable
  */
 class ServiceProvider extends LaravelServiceProvider
 {

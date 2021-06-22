@@ -1,4 +1,4 @@
-<?php namespace Cviebrock\EloquentTaggable\Exceptions;
+<?php namespace Twpars\EloquentTaggable\Exceptions;
 
 /**
  * Class NoTagsSpecifiedException

@@ -1,8 +1,8 @@
-<?php namespace Cviebrock\EloquentTaggable\Test\Configuration;
+<?php namespace Twpars\EloquentTaggable\Test\Configuration;
 
-use Cviebrock\EloquentTaggable\Exceptions\NoTagsSpecifiedException;
-use Cviebrock\EloquentTaggable\Test\TestCase;
-use Cviebrock\EloquentTaggable\Test\TestModel;
+use Twpars\EloquentTaggable\Exceptions\NoTagsSpecifiedException;
+use Twpars\EloquentTaggable\Test\TestCase;
+use Twpars\EloquentTaggable\Test\TestModel;
 use Illuminate\Database\Eloquent\Collection;
 
 

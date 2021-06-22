@@ -1,6 +1,6 @@
 <?php
 
-namespace Cviebrock\EloquentTaggable\Events;
+namespace Twpars\EloquentTaggable\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;

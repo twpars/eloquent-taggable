@@ -1,7 +1,7 @@
-<?php namespace Cviebrock\EloquentTaggable\Test\Configuration;
+<?php namespace Twpars\EloquentTaggable\Test\Configuration;
 
-use Cviebrock\EloquentTaggable\Test\CustomTagClass;
-use Cviebrock\EloquentTaggable\Test\TestCase;
+use Twpars\EloquentTaggable\Test\CustomTagClass;
+use Twpars\EloquentTaggable\Test\TestCase;
 
 
 /**

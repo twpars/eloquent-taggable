@@ -1,6 +1,6 @@
-<?php namespace Cviebrock\EloquentTaggable\Test;
+<?php namespace Twpars\EloquentTaggable\Test;
 
-use Cviebrock\EloquentTaggable\Taggable;
+use Twpars\EloquentTaggable\Taggable;
 use Illuminate\Database\Eloquent\Model;
 
 
